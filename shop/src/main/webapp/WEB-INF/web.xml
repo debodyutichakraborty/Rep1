@@ -1,0 +1,23 @@
+<web-app >
+    <display-name>Archetype created web Application</display-name>
+    <servlet>
+    <servlet-name>Dispatcher</servlet-name>
+    <servlet-class>org.spring.framework.web.servlet.Dispatcherservlet</servlet-class>
+    </servlet>
+
+    
+        <context-param>
+        <param-name>Context ConfiLocation</param-name>
+        <param-value>/WEB-INF/dispatcher-servlet.xml</param-value>
+    </context-param>
+
+    <servlet-mapping>
+        <servlet-name>Dispatcher</servlet-name>
+        <url-pattern></url-pattern>
+    </servlet-mapping>
+
+<listener>
+<listener-class>org.springframework.web.context.CotextLoaderListener</listener-class>
+
+</listener>
+</web-app>     
