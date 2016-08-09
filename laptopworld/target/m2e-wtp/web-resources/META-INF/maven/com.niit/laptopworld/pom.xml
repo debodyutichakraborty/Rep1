@@ -2,13 +2,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.niit</groupId>
-	<artifactId>shopapp</artifactId>
+	<artifactId>laptopworld</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>shopapp Maven Webapp</name>
+	<name>laptopworld Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
-
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -52,6 +51,6 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>shopapp</finalName>
+		<finalName>laptopworld</finalName>
 	</build>
 </project>
