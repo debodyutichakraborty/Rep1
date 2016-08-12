@@ -7,31 +7,30 @@ import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.niit.laptopworldbackend.model.Category;
+import com.niit.laptopworldbackend.model.Product;
 @EnableTransactionManagement
-@Repository(value = "categoryDAO")
-@Service
-public class CategoryDAOImpl implements CategoryDAO {
+@Repository(value = "productDAO")
+public class ProductDAOImpl implements ProductDAO {
 
 	@Autowired
 	private SessionFactory sessionFactory;
 
-	public CategoryDAOImpl(SessionFactory sessionFactory) {
+	public ProductDAOImpl(SessionFactory sessionFactory) {
 
 		this.sessionFactory = sessionFactory;
 
 	}
 
 	@Transactional
-	public boolean save(Category category) {
+	public boolean save(Product product) {
 		// TODO Auto-generated method stub
 		try {
 
-			sessionFactory.getCurrentSession().save(category);
+			sessionFactory.getCurrentSession().save(product);
 			return true;
 		} catch (HibernateException e) {
 			// TODO Auto-generated catch block
@@ -42,10 +41,10 @@ public class CategoryDAOImpl implements CategoryDAO {
 	}
 
 	@Transactional
-	public boolean update(Category category) {
+	public boolean update(Product product) {
 		// TODO Auto-generated method stub
 		try {
-			sessionFactory.getCurrentSession().update(category);
+			sessionFactory.getCurrentSession().update(product);
 			return true;
 		} catch (HibernateException e) {
 			// TODO Auto-generated catch block
@@ -55,25 +54,24 @@ public class CategoryDAOImpl implements CategoryDAO {
 	}
 
 	@Transactional
-	public boolean delete(Category category) {
+	public boolean delete(Product product) {
 		// TODO Auto-generated method stub
 		try {
-			sessionFactory.getCurrentSession().delete(category);
+			sessionFactory.getCurrentSession().delete(product);
 			return true;
 		} catch (HibernateException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return false;
 		}
 	}
 
 	@Transactional
-	public Category get(String id) {
-		String hql = "from category where id=" + "'" + id + "'";
+	public Product get(String id) {
+		String hql = "from product where id=" + "'" + id + "'";
 
 		// TODO Auto-generated method stub
 		Query query = (Query) sessionFactory.getCurrentSession().createQuery(hql);
-		List<Category> list = query.list();
+		List<Product> list = query.list();
 
 		if (list == null) {
 			return null;
@@ -83,8 +81,8 @@ public class CategoryDAOImpl implements CategoryDAO {
 	}
 
 	@Transactional
-	public List<Category> list() {
-		String hql = "from category";
+	public List<Product> list() {
+		String hql = "from product";
 		// TODO Auto-generated method stub
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 
