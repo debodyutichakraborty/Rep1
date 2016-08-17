@@ -7,11 +7,14 @@ import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.niit.laptopworldbackend.model.Category;
 import com.niit.laptopworldbackend.model.Supplier;
-
+@EnableTransactionManagement
 @Repository(value="supplierDAO")
+
 public class SupplierDAOImpl implements SupplierDAO {
 
 
@@ -24,6 +27,7 @@ public class SupplierDAOImpl implements SupplierDAO {
 
 	}
 
+	@Transactional
 	public boolean save(Supplier supplier) {
 		// TODO Auto-generated method stub
 		try {
@@ -38,6 +42,7 @@ public class SupplierDAOImpl implements SupplierDAO {
 		
 	}
 
+	@Transactional
 	public boolean update(Supplier supplier) {
 		// TODO Auto-generated method stub
 		try {
@@ -52,7 +57,7 @@ public class SupplierDAOImpl implements SupplierDAO {
 
 		
 	}
-
+	@Transactional
 	public boolean delete(Supplier supplier) {
 		// TODO Auto-generated method stub
 		try {
@@ -67,7 +72,7 @@ public class SupplierDAOImpl implements SupplierDAO {
 
 		
 	}
-
+	@Transactional
 	public Supplier get(String id) {
 		// TODO Auto-generated method stub
 		String hql = "from supplier where id=" + "'" + id + "'";
@@ -83,7 +88,7 @@ public class SupplierDAOImpl implements SupplierDAO {
 		}
 
 	}
-
+	@Transactional
 	public List<Supplier> list() {
 		// TODO Auto-generated method stub
 		String hql = "from supplier";

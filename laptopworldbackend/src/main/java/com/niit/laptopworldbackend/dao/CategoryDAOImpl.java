@@ -14,7 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.niit.laptopworldbackend.model.Category;
 @EnableTransactionManagement
 @Repository(value = "categoryDAO")
-@Service
+
 public class CategoryDAOImpl implements CategoryDAO {
 
 	@Autowired
@@ -69,7 +69,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 
 	@Transactional
 	public Category get(String id) {
-		String hql = "from category where id=" + "'" + id + "'";
+		String hql = "from Category where id=" + "'" + id + "'";
 
 		// TODO Auto-generated method stub
 		Query query = (Query) sessionFactory.getCurrentSession().createQuery(hql);
@@ -84,7 +84,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 
 	@Transactional
 	public List<Category> list() {
-		String hql = "from category";
+		String hql = "from Category";
 		// TODO Auto-generated method stub
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 

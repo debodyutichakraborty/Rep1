@@ -13,8 +13,8 @@ import org.springframework.stereotype.Component;
 public class Category {
 	@Id
 	private String categoryid;
-	@Column(name="name")
-	private String categoryname;
+	@Column(name="categoryname")
+	private String name;
 	private String categorydescription;
 	public String getCategoryid() {
 		return categoryid;
@@ -23,10 +23,10 @@ public class Category {
 		this.categoryid = categoryid;
 	}
 	public String getCategoryname() {
-		return categoryname;
+		return name;
 	}
 	public void setCategoryname(String categoryname) {
-		this.categoryname = categoryname;
+		this.name = categoryname;
 	}
 	public String getCategorydescription() {
 		return categorydescription;

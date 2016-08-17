@@ -14,12 +14,15 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.niit.laptopworldbackend.dao.CategoryDAO;
+import com.niit.laptopworldbackend.dao.CategoryDAOImpl;
+import com.niit.laptopworldbackend.dao.SupplierDAOImpl;
 import com.niit.laptopworldbackend.model.Category;
 import com.niit.laptopworldbackend.model.Product;
 import com.niit.laptopworldbackend.model.Supplier;
 
 @Configuration
-@ComponentScan("com.niit.model")//to be changed
+@ComponentScan("com.niit.laptopworldbackend")
 @EnableTransactionManagement
 public class ApplicationContextConfig {
 
@@ -27,7 +30,7 @@ public class ApplicationContextConfig {
 	public DataSource getDataSource(){
 		DriverManagerDataSource dataSource =new DriverManagerDataSource();
 		dataSource.setDriverClassName("org.h2.Driver");
-		dataSource.setUrl("jdbc:h2:~/test");
+		dataSource.setUrl("jdbc:h2:tcp://localhost/~/test");
 		dataSource.setUsername("sa");
 		dataSource.setPassword("");
 		
@@ -60,4 +63,16 @@ public class ApplicationContextConfig {
 		return transactionManager;
 	}
 	
+	@Autowired
+	@Bean(name="categoryDAO")
+	public CategoryDAO getCategoryDao(SessionFactory sessionFactory){
+		return new CategoryDAOImpl(sessionFactory);
+		
+	}
+	@Autowired
+	@Bean(name="supplierDAO")
+	public SupplierDAOImpl getsupplierDao(SessionFactory sessionFactory){
+		return new SupplierDAOImpl(sessionFactory);
+		
+	}
 }

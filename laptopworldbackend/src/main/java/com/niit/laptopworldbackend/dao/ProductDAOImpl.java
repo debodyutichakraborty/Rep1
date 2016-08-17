@@ -14,6 +14,7 @@ import com.niit.laptopworldbackend.model.Category;
 import com.niit.laptopworldbackend.model.Product;
 @EnableTransactionManagement
 @Repository(value = "productDAO")
+
 public class ProductDAOImpl implements ProductDAO {
 
 	@Autowired
