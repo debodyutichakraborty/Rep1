@@ -39,9 +39,9 @@ public class ApplicationContextConfig {
 	
 	public Properties getHibernateProperties(){
 		Properties properties =new Properties();
-		properties.put("hibernate.show_sql", "true");
-		properties.put("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
-		properties.put("hibernate.hbm2ddl.auto", "update");
+		properties.put("hibernate.show_sql", "true");//Shows SQL Statements in the console
+		properties.put("hibernate.dialect", "org.hibernate.dialect.H2Dialect");//hibernate will use the dialect used for h2 database
+		properties.put("hibernate.hbm2ddl.auto", "update");//either create or update the database schema
 		return properties;
 	}
 	@Autowired

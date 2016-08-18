@@ -75,7 +75,7 @@ public class SupplierDAOImpl implements SupplierDAO {
 	@Transactional
 	public Supplier get(String id) {
 		// TODO Auto-generated method stub
-		String hql = "from supplier where id=" + "'" + id + "'";
+		String hql = "from Supplier where id=" + "'" + id + "'";
 
 		
 		Query query = (Query) sessionFactory.getCurrentSession().createQuery(hql);
@@ -91,7 +91,7 @@ public class SupplierDAOImpl implements SupplierDAO {
 	@Transactional
 	public List<Supplier> list() {
 		// TODO Auto-generated method stub
-		String hql = "from supplier";
+		String hql = "from Supplier";
 		// TODO Auto-generated method stub
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 

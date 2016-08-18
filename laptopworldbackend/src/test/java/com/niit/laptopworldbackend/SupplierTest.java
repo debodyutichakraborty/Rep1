@@ -5,6 +5,9 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import static org.junit.Assert.*;
+
+import java.util.List;
+
 import com.niit.laptopworldbackend.dao.CategoryDAO;
 import com.niit.laptopworldbackend.dao.ProductDAO;
 import com.niit.laptopworldbackend.dao.SupplierDAO;
@@ -47,7 +50,7 @@ public class SupplierTest {
 
 	}
 	
-	/*@Test
+	@Test
 	public void updateSupplierTestCase()
 	{
 		
@@ -58,7 +61,46 @@ public class SupplierTest {
 	assertEquals("updateSupplierTestCase",supplierDAO.update(supplier),true);
 
 	}
-	*/
+	
+	
+	@Test
+	public void deleteCategoryTestCase()
+	{
+		
+	supplier.setSupplierid("SP01");
+	supplier.setName("Sri Dell");
+	supplier.setSupplieraddress("Kolkata");
+	supplierDAO.delete(supplier);
+	assertEquals("deleteSupplierTestCase",supplierDAO.delete(supplier),true);
+
+	}
+	
+	@Test
+	public void listSupplierTestCase()
+	{
+		
+		List<Supplier> listsupplier=supplierDAO.list();
+		int rowcount=listsupplier.size();
+		assertEquals("listsupplierTestCase",rowcount,3);
+	
+	}
+	
+	
+	
+	
+	
+	@Test
+	public void getsupplierTestCase()
+	{
+		
+		supplier=supplierDAO.get("SP02");
+		
+		assertEquals(supplier.getName(),"Lenovo");
+		
+		
+	}
+	
+	
 	
 }
 
