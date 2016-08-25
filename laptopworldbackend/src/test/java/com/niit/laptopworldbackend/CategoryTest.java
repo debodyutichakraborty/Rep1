@@ -47,7 +47,7 @@ public class CategoryTest {
 	{
 		
 	category.setCategoryid("CG04");
-	category.setCategoryname("Laptops");
+	category.setName("Laptops");
 	category.setCategorydescription("Laptop all Description");
 	categoryDAO.save(category);
 	assertEquals("addCategoryTestCase",categoryDAO.save(category),true);
@@ -59,7 +59,7 @@ public class CategoryTest {
 	{
 		
 	category.setCategoryid("CG04");
-	category.setCategoryname("Laptops");
+	category.setName("Laptops");
 	category.setCategorydescription("Laptop all Description");
 	categoryDAO.delete(category);
 	assertEquals("deleteCategoryTestCase",categoryDAO.delete(category),true);
@@ -71,7 +71,7 @@ public class CategoryTest {
 	{
 		
 	category.setCategoryid("CG02");
-	category.setCategoryname("Dell");
+	category.setName("Dell");
 	category.setCategorydescription("Latest Product");
 	categoryDAO.update(category);
 	assertEquals("updateCategoryTestCase",categoryDAO.update(category),true);
@@ -94,7 +94,7 @@ public class CategoryTest {
 		
 		category=categoryDAO.get("CG01");
 		
-		assertEquals(category.getCategoryname(),"Apple");
+		assertEquals(category.getName(),"Apple");
 		
 		
 	}

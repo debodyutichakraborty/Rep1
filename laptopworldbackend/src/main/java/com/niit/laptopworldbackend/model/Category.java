@@ -22,10 +22,10 @@ public class Category {
 	public void setCategoryid(String categoryid) {
 		this.categoryid = categoryid;
 	}
-	public String getCategoryname() {
+	public String getName() {
 		return name;
 	}
-	public void setCategoryname(String categoryname) {
+	public void setName(String categoryname) {
 		this.name = categoryname;
 	}
 	public String getCategorydescription() {

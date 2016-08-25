@@ -68,7 +68,7 @@ public class ProductDAOImpl implements ProductDAO {
 
 	@Transactional
 	public Product get(String id) {
-		String hql = "from product where id=" + "'" + id + "'";
+		String hql = "from Product where id=" + "'" + id + "'";
 
 		// TODO Auto-generated method stub
 		Query query = (Query) sessionFactory.getCurrentSession().createQuery(hql);
@@ -83,7 +83,7 @@ public class ProductDAOImpl implements ProductDAO {
 
 	@Transactional
 	public List<Product> list() {
-		String hql = "from product";
+		String hql = "from Product";
 		// TODO Auto-generated method stub
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 

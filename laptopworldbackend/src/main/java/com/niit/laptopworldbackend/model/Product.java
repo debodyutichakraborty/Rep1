@@ -5,7 +5,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import org.springframework.stereotype.Component;
 
@@ -23,7 +26,24 @@ public class Product {
 	private double price;
 	private String supplierid;
 	private String categoryid;
+	@ManyToOne
+	@JoinColumn(name="Categoryid")
+	private Category category;
+	@ManyToOne
+	@JoinColumn(name="Supplierid")
+	private Supplier supplier;
 	
+	public Category getCategory() {
+		return category;
+	}
+	
+	public Supplier getSupplier() {
+		return supplier;
+	}
+	
+	
+	//@Transient
+	//MultipartFile file;
 	public String getProductid() {
 		return productid;
 	}
