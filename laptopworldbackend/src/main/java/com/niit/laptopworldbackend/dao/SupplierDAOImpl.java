@@ -81,10 +81,10 @@ public class SupplierDAOImpl implements SupplierDAO {
 		Query query = (Query) sessionFactory.getCurrentSession().createQuery(hql);
 		List<Supplier> list = query.list();
 
-		if (list == null) {
-			return null;
-		} else {
+		if (list.size()>0) {
 			return list.get(0);
+		} else {
+			return null;
 		}
 
 	}

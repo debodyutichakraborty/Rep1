@@ -11,6 +11,7 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 
 import org.springframework.stereotype.Component;
+import org.springframework.web.multipart.MultipartFile;
 
 @Entity
 @Table
@@ -26,9 +27,11 @@ public class Product {
 	private double price;
 	private String supplierid;
 	private String categoryid;
+	@Transient
 	@ManyToOne
 	@JoinColumn(name="Categoryid")
 	private Category category;
+	@Transient
 	@ManyToOne
 	@JoinColumn(name="Supplierid")
 	private Supplier supplier;
@@ -42,8 +45,17 @@ public class Product {
 	}
 	
 	
-	//@Transient
-	//MultipartFile file;
+	public MultipartFile getFile() {
+		return file;
+	}
+
+	public void setFile(MultipartFile file) {
+		this.file = file;
+	}
+
+
+	@Transient
+	MultipartFile file;
 	public String getProductid() {
 		return productid;
 	}
