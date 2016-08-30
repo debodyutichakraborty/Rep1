@@ -7,29 +7,29 @@
 <body>
 	<jsp:include page="Header.jsp"></jsp:include>
 	<br>
-	<br>
-	<br>
+	
+	<h3><center>ADMIN HOME</center></h3>
+	<div class="col-sm-3 col-md-5">
+<img src="${pageContext.request.contextPath}/resources/images/admin.jpg"  width="200" height="150" >
+</div>
 
 	<div class="container">
 	<h3>
 		<li><a href="product">Product</a></li>
 	</h3>
 	<h3>
-		<li><a href="supplier">Suplier</a></li>
+		<li><a href="supplier">Supplier</a></li>
 	</h3>
 	<h3>
-		<li><a href="catagory">Catagory</a></li>
+		<li><a href="category">Category</a></li>
 	</h3>
 	<div></div>
 	<br>
 	<br>
+	<br>
+	</div>
+	<br>
 	<footer>
-		<b><h5>
-				<p>
-					<a href="https://www.facebook.com/quackit.tutorials"><i
-						class="fa fa-facebook-official"></i> Quackit on Facebook</a>
-				</p>
-				<p>&#169; Copyright 2000 - 2016 Laptop World.com &nbsp;</p>
-	</footer>
-	</b>
-	</h5>
+		<b><h5><p>&#169; Copyright 2000 - 2016 Laptop World.com &nbsp;</p></h5></b>
+		</footer>
+	

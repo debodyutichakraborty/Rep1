@@ -12,9 +12,7 @@
 	<br>
 	<div class="container">
 		<h3>About Us</h3>
-		<h3>
-			Our Culture
-		</h3>
+		
 		<br> Our culture defines us … it's our DNA. We call it the
 			Laptop World Way and it's the values we share and the business
 			practices we deploy. It's how we address our day-to-day commitments.
@@ -27,7 +25,6 @@
 			innovations, award-winning designs and strong financial performance.
 			<br>
 			
-				 Our People 
 			 <br> At Laptop World, our people share a common aspiration to
 		be the very best. Whether serving our customers, working together as a
 		team or contributing to the community, we are working to build a
@@ -41,10 +38,7 @@
 		
 		<br> <br>
 		<footer>
-			<p>
-				<a href="https://www.facebook.com/quackit.tutorials"><i
-					class="fa fa-facebook-official"></i> Quackit on Facebook</a>
-			</p>
+			
 			<p>&#169; Copyright 2000 - 2016 Laptop World.com &nbsp;</p>
 		</footer>
 		</div>

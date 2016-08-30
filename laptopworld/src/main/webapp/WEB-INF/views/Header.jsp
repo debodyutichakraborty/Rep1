@@ -1,9 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html>
+
+<html lang="en">
+
+
 <head>
-<title>Bootstrap Case</title>
+
+<title>Laptop World</title>
 
 <meta charset="utf-8">
 
@@ -21,27 +26,33 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script
 
 src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-
+<style type="text/css">
+body { background: #FEFCFD !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+</style>
 
 </head>
-<body bgcolor=" yellow ">
+<body>
 <br>
 <br>
-<b><<h1 style="text-align:center;"><b><u>Laptop World</h1></b>
-<nav class="navbar navbar-inverse navbar-fixed-top">
+
+<nav class="navbar navbar-white navbar--top">
 
 <div class="container-fluid">
 <div class="navbar-header">
-<a class="navbar-brand" href="home">Laptop Store</a>
+<a class="navbar-brand" href="home">Laptop World</a>
 </div>
 <ul class="nav navbar-nav">
 <li class="active"><a href="home">Home</a></li>
 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="product">Product <span class="caret"></span></a>
+
+<%-- <c:forEach var="category" items="${listcategory}"></c:forEach> --%>
 <ul class="dropdown-menu">
-<li><a href="#">Dell</a></li>
+<<%-- li><a href="viewproducts/${category.name}">${category.name}</a></li> --%>
 <li><a href="#">Lenovo</a></li>
 <li><a href="#">Apple</a></li>
 <li><a href="#">Microsoft Surface</a></li>
+<li><a href="#">Dell</a></li>
+<li><a href="#">HP</a></li>
 
 </ul>
 <li><a href="aboutus">About Us</a></li>
@@ -53,19 +64,13 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></scrip
 </div>
 </nav>
 <div class="row">
-<div class="col-sm-3">
-<img src="resources/images/Laptops.jpg" alt="Laptops" width="110%" height="236">
+<div class="col-sm-14">
+<img src="${pageContext.request.contextPath}/resources/images/loop.jpg" width="100%" height="274">/>
 </div>
-<div class="col-sm-3">
-<img src="resources/images/computer.jpg" alt="computer" width="110%" height="236">
+
+
 </div>
-<div class="col-sm-3">
-<img src="resources/images/lapu.png" alt="lapu" width="110%" height="236">
-</div>
-<div class="col-sm-3">
-<img src="resources/images/lap.jpg" alt="lap" width="110%" height="236">
-</div>
-</div>
+
 <br>
 <br>
 
