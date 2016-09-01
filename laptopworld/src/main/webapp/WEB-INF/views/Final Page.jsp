@@ -58,10 +58,7 @@
 	</div>
 	
 		<footer>
-			<p>
-				<a href="https://www.facebook.com/quackit.tutorials"><i
-					class="fa fa-facebook-official"></i> Quackit on Facebook</a>
-			</p>
+			
 			<p>&#169; Copyright 2000 - 2016 Laptop World.com &nbsp;</p>
 		</footer>
 		</div>

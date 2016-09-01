@@ -50,9 +50,22 @@
 											id="phone_number" class="form-control input-sm"
 											placeholder="Phone Number">
 									</div>
-								</div>
+														
+							<div class="form-group">
+									Enter Address
+										<input type="Address" name="Address"
+											id="Address" class="form-control input-sm"
+											placeholder="Address">
+									</div>
+									
+									<div class="form-group">
+									Enter Role
+										<input type="Role" name="Role"
+											id="Role" class="form-control input-sm"
+											placeholder="Role">
+									</div>
 							</div>
-							
+							</div>
 						
 							<a href="login" class="btn btn-info" role="Register">Register</a>
 						</form>

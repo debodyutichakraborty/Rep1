@@ -16,7 +16,12 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.niit.laptopworldbackend.dao.CategoryDAO;
 import com.niit.laptopworldbackend.dao.CategoryDAOImpl;
+import com.niit.laptopworldbackend.dao.ProductDAO;
+import com.niit.laptopworldbackend.dao.ProductDAOImpl;
+import com.niit.laptopworldbackend.dao.SupplierDAO;
 import com.niit.laptopworldbackend.dao.SupplierDAOImpl;
+import com.niit.laptopworldbackend.dao.UserDetailsDAO;
+import com.niit.laptopworldbackend.dao.UserDetailsDAOImpl;
 import com.niit.laptopworldbackend.model.Category;
 import com.niit.laptopworldbackend.model.Product;
 import com.niit.laptopworldbackend.model.Supplier;
@@ -71,8 +76,20 @@ public class ApplicationContextConfig {
 	}
 	@Autowired
 	@Bean(name="supplierDAO")
-	public SupplierDAOImpl getsupplierDao(SessionFactory sessionFactory){
+	public SupplierDAO getsupplierDao(SessionFactory sessionFactory){
 		return new SupplierDAOImpl(sessionFactory);
+		
+	}
+	@Autowired
+	@Bean(name="productDAO")
+	public ProductDAO getproductDao(SessionFactory sessionFactory){
+		return new ProductDAOImpl(sessionFactory);
+		
+	}
+	@Autowired
+	@Bean(name="userDetailsDAO")
+	public UserDetailsDAO getuserdetailsDao(SessionFactory sessionFactory){
+		return new UserDetailsDAOImpl(sessionFactory);
 		
 	}
 }

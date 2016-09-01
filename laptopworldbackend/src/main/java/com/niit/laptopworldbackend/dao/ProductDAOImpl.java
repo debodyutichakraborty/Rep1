@@ -86,8 +86,14 @@ public class ProductDAOImpl implements ProductDAO {
 		String hql = "from Product";
 		// TODO Auto-generated method stub
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
-
-		return query.list();
+		List listproduct=query.list();
+		if(listproduct.size()>0){
+			return listproduct;
+		}
+		else{
+			return null;	
+		}
+		  
 	}
 
 }

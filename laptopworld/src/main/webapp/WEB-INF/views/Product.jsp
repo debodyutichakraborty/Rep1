@@ -103,7 +103,7 @@
 	<div class="container">
 		<div class="row centered-form">
 			<div
-				class="col-xs-15 col-sm-10 col-md-9 col-sm-offset-9 col-md-offset-2">
+				class="col-xs-15 col-sm-10 col-md-1 col-sm-offset-1 col-md-offset-2">
 				<div class="panel panel-info">
 			
 					<div class="panel-heading" >
@@ -124,6 +124,8 @@
       </tr>
     </thead>
     <tbody>
+    <c:choose>
+    <c:when test="${not empty listproduct}">
       <c:forEach var="product" items="${listproduct}">
 			    <tr>
 			    				<td>${product.productid}</td>
@@ -136,8 +138,15 @@
 								<td><a href="deleteproduct/${product.productid}">Delete</a></td>
 			 </tr>
 			 </c:forEach>
+			 </c:when>
+			 <c:otherwise>
+			 <tr><td>${msg}</td></tr>
+			 </c:otherwise>
+			 </c:choose>
 	</tbody>
+	
 	</table>
+	
 						
 						</div>
 						</div>

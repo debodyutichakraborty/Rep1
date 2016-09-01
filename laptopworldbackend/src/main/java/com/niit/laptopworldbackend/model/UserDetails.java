@@ -8,17 +8,17 @@ import javax.persistence.Table;
 import org.springframework.stereotype.Component;
 
 @Entity
-@Table
+@Table (name="USER_DETAILS")
 @Component
 public class UserDetails {
 	@Id
-	private String userdetailsid;
-	@Column(name="name")
-	private String userdetailsname;
-	private String userdetailsemail;
-	private String userdetailscontact;
-	private String userdetailspassword;
-	private String userdetailsaddress;
-	
+	@Column(name="id")
+	private String username;
+	private String name;
+	private String email;
+	private String contact;
+	private String password;
+	private String address;
+	private String role;
 
 }

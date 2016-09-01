@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import static org.junit.Assert.*;
 
+import java.util.Iterator;
 import java.util.List;
 
 import com.niit.laptopworldbackend.dao.CategoryDAO;
@@ -37,7 +38,7 @@ public class ProductTest {
 	
 	}
 	
-	@Test
+	/*@Test
 	public void addProductTestCase()
 	{
 		
@@ -51,7 +52,7 @@ public class ProductTest {
 	assertEquals("addProductTestCase",productDAO.save(product),true);
 
 	}
-	
+*/	/*
 	@Test
 	public void updateProductTestCase()
 	{
@@ -93,8 +94,8 @@ public class ProductTest {
 	
 	}
 	
-	
-	@Test
+*/	
+/*	@Test
 	public void getproductTestCase()
 	{
 		
@@ -103,7 +104,7 @@ public class ProductTest {
 		assertEquals(product.getName(),"Apple");
 		
 		
-	}
+	}*/
 	
 	
 	

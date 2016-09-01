@@ -14,7 +14,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
 @Entity
-@Table
 @Component
 public class Product {
 	
@@ -27,23 +26,31 @@ public class Product {
 	private double price;
 	private String supplierid;
 	private String categoryid;
-	@Transient
+
+	
 	@ManyToOne
-	@JoinColumn(name="Categoryid")
+	@JoinColumn(name="CATEGORYID")
 	private Category category;
-	@Transient
+	
+	
 	@ManyToOne
-	@JoinColumn(name="Supplierid")
+	@JoinColumn(name="SUPPLIERID")
 	private Supplier supplier;
 	
 	public Category getCategory() {
 		return category;
 	}
+	/*public void setCategory(Category category) {
+		this.category = category;
+	}*/
 	
 	public Supplier getSupplier() {
 		return supplier;
 	}
 	
+	/*public void setSupplier(Supplier supplier) {
+		this.supplier = supplier;
+	}*/
 	
 	public MultipartFile getFile() {
 		return file;
@@ -56,6 +63,7 @@ public class Product {
 
 	@Transient
 	MultipartFile file;
+
 	public String getProductid() {
 		return productid;
 	}

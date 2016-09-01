@@ -27,10 +27,7 @@ public String getIndex(Model model){
 public String getAboutus(){
 	return "Aboutus";
 }
-@RequestMapping("/login")
-public String getLogin(){
-	return "login";
-}
+
 @RequestMapping("/registration")
 public String getRegistration(){
 	return "Registration";
@@ -47,10 +44,7 @@ public String getAdmin(){
 public String getHome(){
 	return "index";
 }
-@RequestMapping("/productsdetails")
-public String getProductsdetails(){
-	return "Productsdetails";
-}
+
 @RequestMapping("/paymentpage")
 public String getPaymentpage(){
 	return "Payment Page";
