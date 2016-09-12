@@ -39,22 +39,30 @@ body { background: #FEFCFD !important; } /* Adding !important forces the browser
 
 <div class="container-fluid">
 <div class="navbar-header">
+<div class="dropdown">
 <a class="navbar-brand" href="home">Laptop World</a>
 </div>
 <ul class="nav navbar-nav">
 <li class="active"><a href="home">Home</a></li>
-<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="product">Product <span class="caret"></span></a>
 
-<%-- <c:forEach var="category" items="${listcategory}"></c:forEach> --%>
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="product">Product <span class="caret"></span></a>
 <ul class="dropdown-menu">
-<<%-- li><a href="viewproducts/${category.name}">${category.name}</a></li> --%>
+ <c:forEach items="${listcategorynames}" var="categoryname">
+<li><a href="#"> <c:out value="${categoryname}"></c:out></a></li>
+ </c:forEach>
+
+
+</ul>
+<%-- <c:forEach var="category" items="${listcategory}"></c:forEach> --%>
+<%-- <ul class="dropdown-menu">
+<li><a href="viewproducts/${category.name}">${category.name}</a></li>
 <li><a href="#">Lenovo</a></li>
 <li><a href="#">Apple</a></li>
 <li><a href="#">Microsoft Surface</a></li>
 <li><a href="#">Dell</a></li>
 <li><a href="#">HP</a></li>
 
-</ul>
+</ul> --%> 
 <li><a href="aboutus">About Us</a></li>
 <li><a href="registration">Registration</a></li>
 <li><a href="login">Login</a></li>
@@ -70,7 +78,7 @@ body { background: #FEFCFD !important; } /* Adding !important forces the browser
 
 
 </div>
-
+</div>
 <br>
 <br>
 

@@ -25,6 +25,7 @@ import com.niit.laptopworldbackend.dao.UserDetailsDAOImpl;
 import com.niit.laptopworldbackend.model.Category;
 import com.niit.laptopworldbackend.model.Product;
 import com.niit.laptopworldbackend.model.Supplier;
+import com.niit.laptopworldbackend.model.UserDetails;
 
 @Configuration
 @ComponentScan("com.niit.laptopworldbackend")
@@ -57,7 +58,7 @@ public class ApplicationContextConfig {
 		sessionBuilder.addAnnotatedClass(Category.class);
 		sessionBuilder.addAnnotatedClass(Supplier.class);
 		sessionBuilder.addAnnotatedClass(Product.class);
-		
+		sessionBuilder.addAnnotatedClass(UserDetails.class);
 		return sessionBuilder.buildSessionFactory();
 	}
 	@Autowired
@@ -87,7 +88,7 @@ public class ApplicationContextConfig {
 		
 	}
 	@Autowired
-	@Bean(name="userDetailsDAO")
+	@Bean(name="userdetailsDAO")
 	public UserDetailsDAO getuserdetailsDao(SessionFactory sessionFactory){
 		return new UserDetailsDAOImpl(sessionFactory);
 		

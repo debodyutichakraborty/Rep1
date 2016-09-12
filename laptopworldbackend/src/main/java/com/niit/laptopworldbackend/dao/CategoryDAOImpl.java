@@ -90,5 +90,12 @@ public class CategoryDAOImpl implements CategoryDAO {
 
 		return query.list();
 	}
+	@Transactional
+	public List<String> categoryNameList(){
+		String hql="select name from Category";
+		Query query =sessionFactory.getCurrentSession().createQuery(hql);
+		List<String> listCategory=query.list();
+		return listCategory;
+	}
 
 }

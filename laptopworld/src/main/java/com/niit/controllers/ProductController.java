@@ -39,8 +39,8 @@ public class ProductController {
 		List<Supplier> listsupplier=supplierDAO.list();
 		if(listproduct.size()>0){
 		model.addAttribute("listproduct", listproduct);
-		model.addAttribute("listcategory", listcategory);
-		model.addAttribute("listsupplier", listsupplier);
+		model.addAttribute("categorylist", listcategory);
+		model.addAttribute("supplierlist", listsupplier);
 		}
 		else{
 			
@@ -91,11 +91,14 @@ public class ProductController {
 	public String editProductPage(@PathVariable("id") String id, Model model){
 		
 	List<Product> listproduct=productDAO.list();
+	List<Category> listcategory=categoryDAO.list();
+	List<Supplier> listsupplier=supplierDAO.list();
 	model.addAttribute("listproduct", listproduct);
 	
 	Product product=productDAO.get(id);
 	model.addAttribute("product", product);
-	
+	model.addAttribute("listcategory", listcategory);
+	model.addAttribute("listsupplier", listsupplier);
 	return "Product";
 	}
 	
@@ -109,4 +112,12 @@ public class ProductController {
 	}
 	return "redirect:/product";
 	}
-}
+	
+	@RequestMapping("/viewproduct/{id}")
+	public String viewProductPage(@PathVariable("id") String id, Model model){
+	
+		Product product=productDAO.get(id);
+		model.addAttribute("selectedproduct", product);
+		return "Select Page";
+	}
+} 

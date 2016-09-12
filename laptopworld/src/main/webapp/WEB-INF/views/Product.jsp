@@ -62,16 +62,16 @@
 									
 									<div class="form-group">
 									Enter Product Supplier Id
-										<form:input type="Supplier Id" path="supplierid" id="Supplier Id"
-											class="form-control input-sm" placeholder="Supplier Id"/>
+										<form:select type="Supplier Id" path="supplierid" id="Supplier Id"
+											class="form-control input-sm" items="${supplierlist}" itemValue="supplierid" itemLabel="name"/>
 									</div>
 									
 									<div class="form-group">
 									
 									Enter Product Category Id
-										<form:input type="Category Id" path="categoryid"
+										<form:select type="Category Id" path="categoryid"
 											id="Category Id" class="form-control input-sm"
-											placeholder="Category Id"/>
+											items="${categorylist}" itemValue="categoryid" itemLabel="name"/>
 											</div>
 										
 								

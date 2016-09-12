@@ -2,17 +2,26 @@ package com.niit.laptopworldbackend.dao;
 
 import java.util.List;
 
-import org.springframework.stereotype.Repository;
-
-import com.niit.laptopworldbackend.model.Category;
-import com.niit.laptopworldbackend.model.Product;
 import com.niit.laptopworldbackend.model.UserDetails;
 
-@Repository
+
+
+
+
 public interface UserDetailsDAO {
-public boolean save(UserDetails userdetails);
-public boolean update(UserDetails userdetails);
-public boolean delete(UserDetails userdetails);
-public UserDetails get(String id);
-public List<UserDetails> list();
+
+
+	public List<UserDetails> list();
+
+	public UserDetails get(String id);
+
+	public boolean save(UserDetails userdetails);
+	
+	public void update(UserDetails userDetails);
+
+	public void delete(String id);
+	
+	public boolean isValidUser(String id, String password);
+
+
 }

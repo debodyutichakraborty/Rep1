@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,8 +25,8 @@
 							<form role="form">
 								<div class="container">
 									<div>
-										<img src="resources/images/Laptops.jpg" alt="Laptops"
-											width="310" height="236">
+										<img src="${pageContext.request.contextPath}/resources/images/${selectedproduct.productid}.jpg"
+											width="310" height="236"/>
 									</div>
 									
 									<br>
@@ -40,31 +43,27 @@
 													
 												<tr>
 													<th>Product ID</th>
-													<td align="center">D3455</td>
+													<td align="center">${selectedproduct.productid}</td>
 												</tr>
 												<tr>
 													<th>Product name</th>
-													<td align="center">DELL INSPIRON</td>
+													<td align="center">${selectedproduct.name}</td>
 												</tr>
 												<tr>
 													<th>Product price</th>
-													<td align="center">Rs 25,000</td>
+													<td align="center">${selectedproduct.price}</td>
 												</tr>
 												<tr>
 													<th>Description</th>
-													<td align="center">Windows 10 Home 64
-                                                    Intel Core i7-6500U processor
-                                                    33.8 cm (13.3") diagonal Full-HD Corning® Gorilla® Glass (1920 x 1080)
-                                                    8 GB RAM & lightning-fast next generation 512 GB SSD PCIe storage
-                                                    Intel® HD Graphics 520</td>
+													<td align="center">${selectedproduct.description}</td>
 												</tr>
 												<tr>
 													<th>Supplier</th>
-													<td align="center">Capital Elctronic</td>
+													<td align="center">${selectedproduct.supplier.name}</td>
 												</tr>
 												<tr>
 													<th>Category</th>
-													<td align="center">INSPIRON</td>
+													<td align="center">${selectedproduct.category.name}</td>
 												</tr>
 												</tbody>
 											</table>

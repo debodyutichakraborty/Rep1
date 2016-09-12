@@ -27,14 +27,14 @@ public class Product {
 	private String supplierid;
 	private String categoryid;
 
-	
+
 	@ManyToOne
-	@JoinColumn(name="CATEGORYID")
+	@JoinColumn(name="CATEGORYID",insertable=false, updatable=false)
 	private Category category;
 	
 	
 	@ManyToOne
-	@JoinColumn(name="SUPPLIERID")
+	@JoinColumn(name="SUPPLIERID",insertable=false, updatable=false)
 	private Supplier supplier;
 	
 	public Category getCategory() {

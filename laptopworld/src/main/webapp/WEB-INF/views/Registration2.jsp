@@ -1,7 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
 <title>Laptop World Registration</title>
@@ -13,7 +9,7 @@
 	<br>
 	
 
-<div class="col-sm-3 col-md-5">
+	<div class="col-sm-3 col-md-5">
 <img src="${pageContext.request.contextPath}/resources/images/register.jpg" width="200" height="200" >
 
 	<div class="container">
@@ -25,54 +21,54 @@
 						<h3 class="panel-title">Register</h3>
 					</div>
 					<div class="panel-body">
-						<form:form  action="${pageContext.request.contextPath}/saveuser" modelAttribute="user">
+						<form role="form">
 							<div class="row">
 								<div class="col-xs-6 col-sm-6 col-md-6">
 									<div class="form-group">
 									 Enter Name
-										<form:input type="text" path="name" id="Name"
-											class="form-control input-sm" placeholder="Name"/>
+										<input type="text" name="Name" id="Name"
+											class="form-control input-sm" placeholder="Name">
 									</div>
 									<div class="form-group">
 									Enter User Name
-										<form:input type="text" path="username" id="user_name"
-											class="form-control input-sm" placeholder="User Name"/>
+										<input type="text" name="user_name" id="user_name"
+											class="form-control input-sm" placeholder="User Name">
 									</div>
 									<div class="form-group">
 									Enter Email
-										<form:input type="email" path="email" id="email"
-											class="form-control input-sm" placeholder="Email Address"/>
+										<input type="email" name="email" id="email"
+											class="form-control input-sm" placeholder="Email Address">
 									</div>
 									<div class="form-group">
 									Enter Password
-										<form:input type="password" path="password" id="password"
-											class="form-control input-sm" placeholder="Password"/>
+										<input type="password" name="password" id="password"
+											class="form-control input-sm" placeholder="Password">
 									</div>
 									<div class="form-group">
 									Enter Phone Number
-										<form:input type="phone_number" path="contact"
+										<input type="phone_number" name="phone_number"
 											id="phone_number" class="form-control input-sm"
-											placeholder="Phone Number"/>
+											placeholder="Phone Number">
 									</div>
 														
 							<div class="form-group">
 									Enter Address
-										<form:input type="Address" path="address"
+										<input type="Address" name="Address"
 											id="Address" class="form-control input-sm"
-											placeholder="Address"/>
+											placeholder="Address">
 									</div>
 									
 									<div class="form-group">
 									Enter Role
-										<form:input type="Role" path="role"
+										<input type="Role" name="Role"
 											id="Role" class="form-control input-sm"
-											placeholder="Role"/>
+											placeholder="Role">
 									</div>
 							</div>
 							</div>
 						
-							<input type="submit" class="btn btn-info" value="Register"/>
-						</form:form>
+							<a href="login" class="btn btn-info" role="Register">Register</a>
+						</form>
 					</div>
 				</div>
 			</div>
