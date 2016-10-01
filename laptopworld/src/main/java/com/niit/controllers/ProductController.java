@@ -1,5 +1,6 @@
 package com.niit.controllers;
 
+import java.security.Principal;
 import java.util.Iterator;
 import java.util.List;
 
@@ -14,6 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.niit.laptopworldbackend.dao.CategoryDAO;
 import com.niit.laptopworldbackend.dao.ProductDAO;
 import com.niit.laptopworldbackend.dao.SupplierDAO;
+import com.niit.laptopworldbackend.dao.UserDetailsDAO;
 import com.niit.laptopworldbackend.model.Category;
 import com.niit.laptopworldbackend.model.Product;
 import com.niit.laptopworldbackend.model.Supplier;
@@ -30,6 +32,10 @@ public class ProductController {
 	
 	@Autowired
 	SupplierDAO supplierDAO;
+	
+	@Autowired
+	UserDetailsDAO userdetailsDAO;
+
 	
 	@RequestMapping("/product")
 	public String getProducts(Model model ){
@@ -72,8 +78,11 @@ public class ProductController {
 	}
 	
 	@RequestMapping("/saveproduct")
-	public String saveProduct(@ModelAttribute("product") Product product ){
+	public String saveProduct(@ModelAttribute("product") Product product, Principal principal ){
 	
+		String username=principal.getName();
+		if(userdetailsDAO.get(username).getRole().equals("ADMIN")){
+			
 		
 		if((productDAO.get(product.getProductid()))==null)
 		{
@@ -85,6 +94,10 @@ public class ProductController {
 		MultipartFile file=product.getFile();
 		FileUtil.upload("E:/Maven Workspace/laptopworld/src/main/webapp/resources/images/", file, product.getProductid()+".jpg");
 		return "redirect:/product";
+		}
+		else{
+			return "redirect:/403";
+		}
 	}
 	
 	@RequestMapping("/editproduct/{id}")

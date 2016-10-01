@@ -6,7 +6,7 @@
 </head>
 <body>
 
-	<jsp:include page="Header.jsp"></jsp:include>
+	<jsp:include page="Headers.jsp"></jsp:include>
 	<br>
 	<br>
 	<br>
@@ -32,11 +32,11 @@
 									</div>
 								</div>
 							</td>
-							<td data-th="Price">Rs500</td>
+							<td data-th="Price">Rs20000</td>
 							<td data-th="Quantity">
 								<input type="number" class="form-control text-center" value="2">
 							</td>
-							<td data-th="Subtotal" class="text-center">Rs1000</td>
+							<td data-th="Subtotal" class="text-center">Rs20000</td>
 							<td class="actions" data-th="">
 								<button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
 								<button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>								
@@ -50,8 +50,8 @@
 						<tr>
 							<td><a href="homee" class="btn btn-warning"role="continue shopping"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
 							<td colspan="2" class="hidden-xs"></td>
-							<td class="hidden-xs text-center"><strong>Total Rs1000</strong></td>
-							<td><a href="paymentpage" class="btn btn-info" role="checkout">Checkout</a> <i class="fa fa-angle-right"></i></a></td>
+							<td class="hidden-xs text-center"><strong>Total Rs20000</strong></td>
+							<td><a href="purchasedetails" class="btn btn-info" role="checkout">Checkout</a> <i class="fa fa-angle-right"></i></a></td>
 						</tr>
 						</tfoot>
 						</table>

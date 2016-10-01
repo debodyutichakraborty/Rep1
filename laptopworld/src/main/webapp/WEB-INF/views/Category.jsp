@@ -11,11 +11,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<jsp:include page="Header.jsp"></jsp:include>
+	<jsp:include page="Headers.jsp"></jsp:include>
 	<br>
 	<br>
+	<a href="product">Product</a>|<a href="supplier">Supplier</a>|<a href="category">category</a>
 	<br>
 	<div class="container">
+	
+	<br>
 		<div class="row centered-form">
 			<div
 				class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">

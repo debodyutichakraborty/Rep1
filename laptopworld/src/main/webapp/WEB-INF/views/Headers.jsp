@@ -55,11 +55,10 @@ body { background: #FEFCFD !important; } /* Adding !important forces the browser
 </ul>
 
 <li><a href="aboutus">About Us</a></li>
-<li><a href="registration">Registration</a></li>
-<li><a href="login">Login</a></li>
+<li><a href="login">Logout</a></li>
 
 
-
+<li align="right"><a href="#">Welcome ${sessionScope.user.name}</a></li>
 </div>
 </nav>
 <div class="row">

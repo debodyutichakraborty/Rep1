@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<jsp:include page="Header.jsp"></jsp:include>
+	<jsp:include page="Headers.jsp"></jsp:include>
 	<br>
 	<br>
 	<br>
@@ -16,7 +16,7 @@
 		<div class="row">
 			<div class="row centered-form">
 				<div
-					class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+					class="col-xs-12 col-sm-8 col-md-5 col-sm-offset-2 col-md-offset-4">
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<h3 class="panel-title">Selected Item</h3>
@@ -40,6 +40,10 @@
 												</tr>
 													</thead>
 													<tbody>
+													
+													
+													      
+													
 													
 												<tr>
 													<th>Product ID</th>
@@ -71,7 +75,7 @@
 									
 									</div>
 								</div>
-								<a href="cart" class="btn btn-info" role="proceed">Proceed</a>
+								<a href="${pageContext.request.contextPath}/cart" class="btn btn-info" role="proceed">Proceed</a>
 							</form>
 						</div>
 					</div>

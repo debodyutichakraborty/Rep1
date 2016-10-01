@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<jsp:include page="Header.jsp"></jsp:include>
+	<jsp:include page="Headers.jsp"></jsp:include>
 	<br>
 	<br>
 	<br>
@@ -17,7 +17,7 @@
 	<div class="container">
 		<div class="row centered-form">
 			<div
-				class="col-xs-16 col-sm-16 col-md-5 col-sm-offset-1 col-md-offset-2">
+				class="col-xs-16 col-sm-16 col-md-9 col-sm-offset-6 col-md-offset-2">
 				<div class="panel panel-info">
 			
 					<div class="panel-heading" >

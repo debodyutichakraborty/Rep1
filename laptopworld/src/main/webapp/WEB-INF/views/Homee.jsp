@@ -5,13 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<jsp:include page="Header.jsp"></jsp:include>
-	<h3>Welcome User </h3>
+	<jsp:include page="Headers.jsp"></jsp:include>
+	<div>
+Welcome <b>${sessionScope.userdetails.username}</b>
+</div>
 	<br>
 	<br>
 	<h4>Laptop World</h4>
 	
-<h3><p>PCWorld helps you navigate the PC ecosystem 
+  <h3><p>PCWorld helps you navigate the PC ecosystem 
    to find the products you want and the advice 
    you need to get the job done please click below.</p></h3>
 

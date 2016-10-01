@@ -27,28 +27,28 @@
 						<h3 class="panel-title">Login Here</h3>
 					</div>
 					<div class="panel-body">
-						<%-- <form:form action="/loginuser"> --%>
-					
-						<form role="form">
+						<form action="<c:url value='/j_spring_security_check'/>" method="post">
 							<div class="row">
 								<div class="col-xs-6 col-sm-6 col-md-6">
 									<div class="form-group">
-			    				<form:input type="email" path="email" id="email" class="form-control input-sm" placeholder="Email Address"/>
+			    				<input type="text" id="username"  name="username" class="form-control input-sm" placeholder="Username"/>
 			    			</div>
                             </div>
                             </div>
 			    			<div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
-			    						<form:input type="password" path="password" id="password" class="form-control input-sm" placeholder="Password"/>
+			    						<input type="password"  id="password" name="password" class="form-control input-sm" placeholder="Password"/>
 			    					</div>
 			    				</div>
 			    				</div>
 			    			
 			    		<input type="submit" class="btn btn-info" value="Login"/>
-			    		
+			    		<input type="hidden" name="${_csrf.parameterName}"
+			    		value="${_csrf.token}"/> 
 			    		</form>
 			    		<p><b>${msgreg}</b></p>
+			    		<p><b>${msglogin}</b></p>
 			    	</div>
 	    		</div>
     		</div>

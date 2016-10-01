@@ -6,7 +6,7 @@
 </head>
 <body>
 
-	<jsp:include page="Header.jsp"></jsp:include>
+	<jsp:include page="Headers.jsp"></jsp:include>
 	<br>
 	<br>
 	<br>
@@ -47,7 +47,7 @@
   
 
 
-  <input type="submit" class="submit" value="Submit Payment">
+  <td><a href="thanks" class="btn btn-info" role="proceed">Proceed</a>
 </form>
 </div>
 </div>

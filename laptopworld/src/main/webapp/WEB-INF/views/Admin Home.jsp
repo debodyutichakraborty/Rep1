@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<jsp:include page="Header.jsp"></jsp:include>
+	<jsp:include page="Headers.jsp"></jsp:include>
 	<br>
 	
 	<h3><center>ADMIN HOME</center></h3>
@@ -13,6 +13,9 @@
 <img src="${pageContext.request.contextPath}/resources/images/admin.jpg"  width="200" height="150" >
 </div>
 
+<div>
+Welcome <b>${sessionScope.userdetails.username}</b>
+</div>
 	<div class="container">
 	<h3>
 		<li><a href="product">Product</a></li>

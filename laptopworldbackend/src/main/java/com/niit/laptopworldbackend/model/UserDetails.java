@@ -12,7 +12,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserDetails {
 	@Id
-	@Column(name="id")
 	private String username;
 	private String name;
 	private String email;
@@ -20,6 +19,13 @@ public class UserDetails {
 	private String password;
 	private String address;
 	private String role;
+	private char enabled;
+	public char getEnabled() {
+		return enabled;
+	}
+	public void setEnabled(char enabled) {
+		this.enabled = enabled;
+	}
 	public String getUsername() {
 		return username;
 	}
